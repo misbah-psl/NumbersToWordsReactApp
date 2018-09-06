@@ -82,14 +82,14 @@ export default class App extends React.Component {
             // get ten's place
             wordStr += words[10 * Math.floor(num / 10)];
             // get one's place
-            r = num % 10;
+            r        = num % 10;
             if (r > 0) {
                 wordStr += ' ' + words[r];
             }
         } else if (num < 1000) {
             // get 100th place
             wordStr += words[Math.floor(num / 100)] + ' hundred';
-            r = num % 100;
+            r        = num % 100;
             if (r > 0) {
                 // get ten's and one's place
                 wordStr += ' and ' + this.convert(r);
@@ -97,7 +97,7 @@ export default class App extends React.Component {
         } else if (num < 1000000) {
             // get thousand's place
             wordStr += this.convert(Math.floor(num / 1000)) + ' thousand';
-            r = num % 1000;
+            r        = num % 1000;
             if (r > 0) {
                 wordStr += ', ';
                 if (r < 100) {
@@ -107,7 +107,7 @@ export default class App extends React.Component {
             }
         } else {
             wordStr += this.convert(Math.floor(num / 1000000)) + ' million';
-            r = num % 1000000;
+            r        = num % 1000000;
             if (r > 0) {
                 wordStr += ', ';
                 if (r < 100) {
