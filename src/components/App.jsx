@@ -136,7 +136,7 @@ export default class App extends React.Component {
                 <label> Enter a Number: </label> <input type = "text" name = "num" ref = { (numInput) => {this.numInput = numInput} } /> 
                 <br/>
                 <br/>
-                <input type = "submit" value = "Conver Number to Words" name = "convert" / >
+                <input type = "submit" value = "Conver Number to Words" name = "convert" />
               </form>
               <p>{ this.state.wordStr !== "" ? "You have entered:" : "" }</p>
               <label>{ this.state.wordStr }</label> 
